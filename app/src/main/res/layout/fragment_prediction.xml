@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <EditText
+        android:id="@+id/predict_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/prediction_title_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/predict_title"/>
+
+    <TextView
+        android:id="@+id/description_confidence"
+        android:text="@string/confidence_percent"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="23dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/predict_title"/>
+
+    <TextView
+        android:id="@+id/percent_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="20dp"
+        android:gravity="end"
+        android:layout_alignParentRight="true"
+        android:text="%"
+        android:layout_below="@id/predict_title"
+        android:textAlignment="textEnd"/>
+
+    <EditText
+        android:id="@+id/predict_confidence_level"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:hint="0"
+        android:gravity="end"
+        android:inputType="number"
+        android:maxLength="2"
+        android:layout_below="@id/predict_title"
+        android:layout_toLeftOf="@id/percent_sign"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textAlignment="textEnd"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/description_confidence"/>
+
+    <TextView
+        android:id="@+id/description_date"
+        android:text="@string/predict_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="23dp"
+        android:layout_below="@id/description_confidence"/>
+
+    <TextView
+        android:id="@+id/predict_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:hint="Oct 31, 2020"
+        android:textSize="18sp"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/description_confidence"
+        android:layout_toRightOf="@id/description_date"
+        android:layout_alignParentRight="true"
+        android:textAlignment="textEnd"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/description_date"/>
+
+    <TextView
+        android:id="@+id/description_entry"
+        android:text="@string/entry_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="23dp"
+        android:layout_below="@id/description_date"/>
+
+    <TextView
+        android:id="@+id/entry_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="18sp"
+        android:hint="Jul 4, 2017"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/description_date"
+        android:layout_toRightOf="@id/description_entry"
+        android:layout_alignParentRight="true"
+        android:textAlignment="textEnd"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/description_entry"/>
+
+    <TextView
+        android:id="@+id/description_spinner"
+        android:text="@string/spinner_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="23dp"
+        android:layout_below="@id/description_entry"/>
+
+    <Spinner
+        android:id="@+id/is_outcome_known"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="2dp"
+        android:backgroundTint="@color/gray"
+        android:layout_below="@id/description_entry"
+        android:layout_toRightOf="@id/description_spinner"
+        android:textAlignment="textEnd"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/description_spinner"/>
+
+    <EditText
+        android:id="@+id/predict_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prediction_description_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/is_outcome_known"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/predict_description"/>
+
+</RelativeLayout>

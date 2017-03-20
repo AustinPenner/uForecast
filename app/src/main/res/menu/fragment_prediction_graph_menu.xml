@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fourBars"
+        android:title="@string/four_intervals">
+    </item>
+
+    <item
+        android:id="@+id/tenBars"
+        android:title="@string/ten_intervals">
+    </item>
+
+</menu>

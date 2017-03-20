@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_first"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/predict_list"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/predict_list"/>
+        <item
+            android:id="@+id/predict_list_pend"
+            android:icon="@drawable/ic_sort_black_24dp"
+            android:title="@string/predict_list_pend"/>
+        <item
+            android:id="@+id/predict_graph"
+            android:icon="@drawable/ic_graph_black_24dp"
+            android:title="@string/predict_graph"/>
+    </group>
+
+    <group
+        android:id="@+id/menu_second"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/about_page"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/about_page"/>
+    </group>
+
+</menu>
